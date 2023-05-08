@@ -3,13 +3,11 @@ import TODO from './components/TODO'
 
 
 function App() {
-
-
   return (
     <>
-      <TODO/>
+      <TODO title={"My TODO "} />
     </>
-  )
+  );
 }
 
 export default App
