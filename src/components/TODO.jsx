@@ -2,7 +2,7 @@ import React from 'react'
 
 const TODO = (props) => {
   return (
-    <div className="w-full p-10 h-screen bg-[#cafafe]">
+    <div className="w-full p-10 h-screen  bg-[#cafafe]">
       <h1 className="text-5xl font-bold mb-10 text-[rgb(51,51,51)]">
         My ToDo!
       </h1>
