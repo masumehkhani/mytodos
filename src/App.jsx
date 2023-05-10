@@ -1,21 +1,32 @@
 import { useState } from 'react'
 import TODO from './components/TODO'
-
+import Modal from "./components/Modal";
+import Backdrop from "./components/Backdrop";
 
 function App() {
+  const [ShowModal, setShowModal] = useState(false);
   const addHandler = () => {
-    console.log("add");
+    setShowModal(true);
   };
   const deleteHandler = () => {
     console.log("delete");
   };
+  const closeModalHandler = () => {
+    setShowModal(false);
+  };
   return (
     <>
-      <TODO
-        title={"My TODO "}
-        onAddClick={addHandler}
-        onDeleteClick={deleteHandler}
-      />
+      <div className="relative">
+        <TODO
+          title={"My TODO "}
+          onAddClick={addHandler}
+          onDeleteClick={deleteHandler}
+        />
+        {ShowModal && (
+          <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler} />
+        )}
+        {ShowModal && <Backdrop onClick={closeModalHandler} />}
+      </div>
     </>
   );
 }
