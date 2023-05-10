@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const TODO = (props) => {
   return (
-    <div className="w-full p-10 h-screen  bg-[#cafafe]">
+    <div className="w-full p-10 min-h-screen bg-[#cafafe]">
       <h1 className="text-5xl font-bold mb-10 text-[rgb(51,51,51)]">
         My ToDo!
       </h1>
-      <div className="todo-container  bg-[#3feee6] border rounded-xl border-[#ccc] w-1/3 my-18 p-6">
+      <div className="todo-container bg-[#3feee6] border rounded-xl border-[#ccc] mx-auto w-full md:w-2/3 lg:w-1/2 my-18 p-6">
         <h2 className="text-3xl mb-10">{props.title}</h2>
         <button
           onClick={props.onAddClick}
@@ -27,4 +27,4 @@ const TODO = (props) => {
   );
 };
 
-export default TODO
+export default TODO;
